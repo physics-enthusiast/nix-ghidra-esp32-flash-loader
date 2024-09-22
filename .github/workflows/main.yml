@@ -1,0 +1,33 @@
+name: Test
+on:
+  push:
+  workflow_dispatch:
+concurrency:
+  group: test
+  cancel-in-progress: true
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: |
+          nix build -L -f default.nix ghidra-esp32-flash-loader
+
+  test-flake:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: |
+          nix run --no-write-lock-file github:physics-enthusiast/nix-ghidra-esp32-flash-loader/${{ github.ref }}
