@@ -7,8 +7,8 @@ let
     owner = "physics-enthusiast";
     repo = "ghidra-esp32-flash-loader";
     #rev = "v${version}";
-    rev = "a2f7ed99d91788c0616a40795ac6a415d6334fb3";
-    hash = "sha256-y2stSS+QeCnq0yodk66jIch0PlBGEoQ4KMHfTem3F90=";
+    rev = "436d4f667afb831e1077c5687689923fde81e4ab";
+    hash = "sha256-y2stSS+QeCnq0yodk66jIch0PlBGEoa4KMHfTem3F90=";
     fetchSubmodules = true;
   };
 in
