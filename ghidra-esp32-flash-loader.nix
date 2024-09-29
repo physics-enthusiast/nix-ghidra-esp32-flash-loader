@@ -8,7 +8,7 @@ let
     repo = "ghidra-esp32-flash-loader";
     #rev = "v${version}";
     rev = "85bc156e959786aac186f86f957a468cbaa00b9c";
-    hash = "sha256-fNl+NG/dIEdK3qAoiEV7mjwdjNf+pDZe9xtUnfofn0c=";
+    hash = "sha256-4CwpGF7MpGhDhxP8czXP/+sStNraRxrkyWOjRB2Ew4E=";
     fetchSubmodules = true;
   };
 in
